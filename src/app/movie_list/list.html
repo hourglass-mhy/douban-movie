@@ -1,0 +1,39 @@
+ <h2 class="page-header">{{vm.title}}</h2>
+   <!--列表组 -->
+  <ul class="list-group">
+      <!--二级路由-->
+    <a href="#" class="list-group-item" ng-repeat='movie in vm.movies'>
+      <span class="badge">{{movie.rating.average}}</span>
+      <div class="media">
+          <div class="media-left" href="#">
+              <img ng-src='{{ movie.images.small }}' alt="">
+          </div>
+          <div class="media-body">
+              <h4 class="media-heading">{{movie.title}}</h4>
+              <p>类型: {{movie.genres.join('/')}}</p>
+              <!--传递滤波器的函数-->
+              <p>导演：{{movie.directors | getName: ","}}</span>
+              </p>
+              <p>主演：{{movie.casts | getName: ","}}</span>
+              </p>
+          </div>
+      </div>
+    </a>                   
+  </ul>
+  <!--loading图-->
+<div class="loader">
+    <i class="face"></i>
+    <i class="balls"></i>
+    <i class="balls"></i>
+    <i class="balls"></i>
+</div>
+<p>总共：0条记录，第/页</p>
+<nav>
+    <ul class="pager">
+        <li><a href="" >上一页</a></li>
+        <li><a href="" >下一页</a></li>
+    </ul>
+</nav>
+            
+          
+

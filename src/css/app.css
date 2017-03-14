@@ -13,6 +13,9 @@
   color: #fff;
   background-color: transparent;
 }
+.navbar-fixed-top {
+  border: 0;
+}
 .nav-sidebar {
   margin-right: -21px;
   /* 20px padding + 1px border */
@@ -60,9 +63,6 @@
 }
 .main {
   padding: 20px;
-}
-.main .page-header {
-  margin-top: 0;
 }
 @media (min-width: 768px) {
   .main {
